@@ -1,0 +1,15 @@
+.Nav a,
+.Nav a:active,
+.Nav a:focus,
+.Nav a:visited {
+  color: black;
+}
+
+.Nav a:hover {
+  color: blue;
+  text-decoration: solid;
+}
+
+.Nav a:not(:last-of-type) {
+  margin-right: 120px;
+}

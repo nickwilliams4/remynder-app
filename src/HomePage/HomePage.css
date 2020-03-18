@@ -1,0 +1,13 @@
+
+h1 {
+  border-style: double;
+  font-size: 50px;
+}
+
+h3 {
+  border-style: outset;
+}
+
+h2 {
+  font-style: italic;
+}
