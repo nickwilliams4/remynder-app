@@ -10,7 +10,7 @@ export default class Nav extends Component {
         <Link to='/'>
           Remynder
         </Link>
-        <Link to='/NotePage'>
+        <Link to='/ReturningUser'>
           Log In
         </Link>
       </Content>
