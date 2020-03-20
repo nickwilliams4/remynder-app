@@ -22,9 +22,10 @@ export default class NotePage extends Component {
           {this.props.notes.map(note =>  <section>
               <header>
                 <h2>{note.title}</h2>
-                <p>{note.created}</p>
+                <h4>{note.content}</h4>
+                <p>Created: {note.created}</p>
+                <p>Remynder: {note.remynder}</p>
               </header>
-              <p>{note.content}</p>
               <button>Edit</button>
               <button>Delete</button>
             </section>)}

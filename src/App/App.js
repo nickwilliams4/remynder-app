@@ -13,18 +13,21 @@ export default class App extends Component {
   state = {
     notes: [{id: "1",
             "title": "Jamaica",
-            "content": "Plan trip to Jamiaca",
-            created: "2/24/2020"
+            "content": "Cancel trip to Jamiaca",
+            created: "3/10/2020",
+            "remynder": "Every 12 hours"
   },
   {id: "2",
   "title": "Dentist",
-  "content": "Make dentist appt",
-  created: "2/24/2020"
+  "content": "Make dentist appt for April",
+  created: "2/24/2020",
+  "remynder": "Every 2 days"
 },
 {id: "3",
-            "title": "Novel",
-            "content": "write new novel",
-            created: "2/24/2020"
+            "title": "New Novel Idea",
+            "content": "The dinsosaurs actually moved to Jupiter",
+            created: "1/18/2020",
+            "remynder": "Every 24 hours"
   }
 ]
   };
