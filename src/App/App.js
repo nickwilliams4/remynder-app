@@ -11,24 +11,23 @@ import ReturningUser from '../ReturningUser/ReturningUser'
 
 export default class App extends Component {
   state = {
-    notes: []
+    notes: [{id: "1",
+            "title": "Jamaica",
+            "content": "Plan trip to Jamiaca",
+            created: "2/24/2020"
+  },
+  {id: "2",
+  "title": "Dentist",
+  "content": "Make dentist appt",
+  created: "2/24/2020"
+},
+{id: "3",
+            "title": "Novel",
+            "content": "write new novel",
+            created: "2/24/2020"
+  }
+]
   };
-
-renderMainRoutes() {
-  const {notes } = this.state;
-  return (
-      <>
-          <Route
-              path="/note/:noteId"
-              render={routeProps => {
-                  const {noteId} = routeProps.match.params;
-                  const note = findNote(notes, noteId);
-                  return <NotePage {...routeProps} note={note} />;
-              }}
-          />
-      </>
-  );
-}
 
 
 
@@ -41,7 +40,7 @@ renderMainRoutes() {
         <main>
           <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route path='/NotePage' component={NotePage} />
+            <Route path='/NotePage'><NotePage notes={this.state.notes}/></Route>
             <Route path='/AddNote' component={AddNote} />
             <Route path='/ReturningUser' component={ReturningUser} />
             <Route component={NotFoundPage} />

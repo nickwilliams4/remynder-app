@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Content from '../Content/Content'
+import { Link } from 'react-router-dom'
 import './AddNote.css'
 
 export default class AddNote extends Component {
@@ -31,8 +32,9 @@ export default class AddNote extends Component {
                 <option value="custom">Custom</option>
               </select>
             </div>
-
+            <Link to='/NotePage'>
             <button type="submit">Submit</button>
+              </Link>
             <button type="reset">Reset</button>
           </form>
         </main>
