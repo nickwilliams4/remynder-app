@@ -13,7 +13,7 @@ export default class AddNote extends Component {
           </header>
           <form id="record-remynder">
             <div class="form-section">
-              <label for="remynder-title">Remynder title</label>
+              <label for="remynder-title">Remynder title: </label>
               <input type="text" name="remynder-title" placeholder="Call Jane" required></input>
             </div>
             <div class="form-section">
@@ -23,7 +23,7 @@ export default class AddNote extends Component {
               </div>
             </div>
             <div class="frequency-container" class="form-section">
-              <label for="frequency">How often do you want email remynders?</label>
+              <label for="frequency">How often do you want email remynders? </label>
               <select id="cars">
                 <option value="six-hours">Every 6 Hours</option>
                 <option value="twelve-hours">Every 12 Hours</option>

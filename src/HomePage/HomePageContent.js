@@ -28,11 +28,11 @@ export default class HomePageContent extends Component {
             <h3>Keep remynders coming</h3>
           </header>
           <p>[<em>placeholder for screenshot of emailed reminders</em>]</p>
-          <p>If you are like most of us, you are constantly checking your inbox. This application will make you more productive by sending your remynders to a spot you are already checking many times a day.</p>
+          <p>This application will make you more productive by sending remynders to your inbox as often as you would like until you complete your task. Checking our email often is something we are all accustomed to doing so give yourself an edge to get things done.</p>
         </section>
         <section>
           <header>
-            <h3>Up Your Production Now</h3>
+            <h3>Start maximizing your production now!</h3>
           </header>
           </section>
       </Content>
