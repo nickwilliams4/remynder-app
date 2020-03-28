@@ -2,7 +2,7 @@
   text-decoration: underline;
 }
 
-section {
-  border-bottom: solid;
-  border-width: thin;
+
+ul {
+  list-style: none;
 }

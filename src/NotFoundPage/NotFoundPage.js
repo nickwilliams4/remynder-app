@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
-import Content from '../Content/Content'
 
 export default class NotFoundPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasError: false
+    };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
   render() {
+    if (this.state.hasError) {
     return (
-      <Content className='NotFoundPage'>
-        <h2>Page Not Found</h2>
-        <p>This page doesn't exist, try going back or using the navigation menu</p>
-      </Content>
-    )
+      <h2>Something went wrong. Please try again later.</h2>
+    );
+    }
+    return this.props.children;
   }
 }

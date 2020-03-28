@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Content from '../Content/Content'
 import { Link } from 'react-router-dom'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import moment from 'moment'
+import './Note.css'
 
 export default class Note extends Component {
   static defaultProps ={
@@ -15,7 +15,7 @@ export default class Note extends Component {
     e.preventDefault()
     const note_id = this.props.id
 
-    fetch(`${config.API_ENDPOINT}/NotePage/${note_id}`, {
+    fetch(`${config.API_ENDPOINT}/notes/${note_id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ export default class Note extends Component {
   }
 
   render() {
-    const { title, id, modifed } = this.props
+    const { title, id, created, content, remynder } = this.props
     return (
       <div className='Note'>
       <h2 className='Note__title'>
@@ -43,27 +43,36 @@ export default class Note extends Component {
           {title}
         </Link>
       </h2>
+      <h4>{content}</h4>
+      <div className='Note__dates'>
+        <div className='Note__dates-modified'>
+          Created: 
+          {' '}
+          <span className='Date'>
+            {moment(created).format('MMM Do YYYY')}
+          </span>
+        </div>
+      </div>
+      <div className='Note__Content'>
+      </div>
+      <p>Remynder: {remynder}</p>
+      <button
+        className='Note_edit'
+        type='button'
+        >
+          {''}
+          Edit
+        </button>
       <button
         className='Note__delete'
         type='button'
         onClick={this.handleClickDelete}
       >
-       
         {' '}
-        remove
+        Delete
       </button>
-      <div className='Note__dates'>
-        <div className='Note__dates-modified'>
-          Modified
-          {' '}
-          {/* <span className='Date'>
-            {moment(modified).format('Do MMM YYYY')}
-          </span> */}
-        </div>
-      </div>
-      <div className='Note__Content'>
-      </div>
     </div>
     )
   }
 }
+

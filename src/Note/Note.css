@@ -1,0 +1,17 @@
+.newRemynder {
+  text-decoration: underline;
+}
+
+section {
+  border-bottom: solid;
+  border-width: thin;
+}
+
+.Note {
+  border-bottom: solid;
+  border-width: thin;
+}
+
+ul {
+  padding: 0;
+}
