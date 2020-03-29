@@ -11,13 +11,13 @@ export default class ReturningUser extends Component {
             <h1>Welcome Back!</h1>
           </header>
           <h3>Please Log In</h3>
-          <form class='login-form'>
+          <form className='login-form'>
               <div>
-                <label for="username">Email: </label>
+                <label htmlFor="username">Email: </label>
                 <input type="text" name='username' id='username' placeholder="john@lennon.com" />
               </div>
               <div>
-                <label for="password">Password: </label>
+                <label htmlFor="password">Password: </label>
                 <input type="password" name='password' id='password' />
               </div>
               <Link to='/NotePage'>

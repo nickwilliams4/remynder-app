@@ -1,0 +1,19 @@
+.NoteContentPage {
+  margin-top: 60px;
+}
+
+.Note_title {
+  font-size: 30px;
+}
+
+.NoteContent {
+  margin-top: 50px;
+}
+
+.Note__dates-created {
+  margin-top: 75px;
+}
+
+button {
+  margin: 5px;
+}

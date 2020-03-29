@@ -1,7 +1,9 @@
 import React from 'react'
 import ApiContext from '../ApiContext'
 import { findNote } from '../HelperFunctions'
+import './NoteContent.css'
 import moment from 'moment'
+import { Link } from 'react-router-dom'
 
 export default class NoteContent extends React.Component {
   static defaultProps = {
@@ -17,24 +19,24 @@ export default class NoteContent extends React.Component {
   render() {
     const { notes } = this.context
     const { note_id } = this.props.match.params
-    const note = findNote(notes, note_id) || {}
-    console.log(note_id)
+    const note = findNote(notes, +note_id) || {}
     return (
-      <div className='NotePageNav'>
+      <div className='NoteContentPage'>
         <div className='Note_title'>{note.title}</div>
-        <h4>{note.content}</h4>
+        <h4 className='NoteContent'>{note.content}</h4>
       <div className='Note__dates'>
-        <div className='Note__dates-modified'>
-          Modified: 
+        <div className='Note__dates-created'>
+          Created: 
           {' '}
           <span className='Date'>
             {moment(note.created).format('MMM Do YYYY')}
           </span>
         </div>
       </div>
-      <div className='Note__Content'>
-      </div>
       <p>Remynder: {note.remynder}</p>
+      <Link to='/NotePage'>
+      <button>Back</button>
+    </Link>
       </div>
     )
   }

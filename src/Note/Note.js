@@ -56,6 +56,7 @@ export default class Note extends Component {
       <div className='Note__Content'>
       </div>
       <p>Remynder: {remynder}</p>
+      <Link to={`edit/${id}`}>
       <button
         className='Note_edit'
         type='button'
@@ -63,6 +64,7 @@ export default class Note extends Component {
           {''}
           Edit
         </button>
+        </Link>
       <button
         className='Note__delete'
         type='button'

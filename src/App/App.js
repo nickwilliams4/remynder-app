@@ -10,6 +10,7 @@ import ReturningUser from '../ReturningUser/ReturningUser'
 import config from '../config'
 import ApiContext from '../ApiContext'
 import NoteContent from '../NoteContent/NoteContent'
+import EditNote from '../EditNote/EditNote'
 
 export default class App extends Component {
   state = {
@@ -46,12 +47,21 @@ addNote = note => {
   })
 }
 
+editNote = editedNote => {
+  this.setState({
+    notes: this.state.notes.map(note => 
+      (note.id !== editedNote.id ? note: editedNote)
+      )
+  })
+}
+
 
   render() {
     const contextValue = {
       notes: this.state.notes,
       deleteNote: this.handleDeleteNote,
-      addNote: this.addNote
+      addNote: this.addNote,
+      editNote: this.editNote
     }
     return (
       <ApiContext.Provider value={contextValue}>
@@ -65,6 +75,7 @@ addNote = note => {
               <Route path='/NotePage'><NotePage /></Route>
               <Route path="/AddNote" component={AddNote} />
               <Route path="/note/:note_id" component={NoteContent} />
+              <Route path="/edit/:note_id" component={EditNote} />
               <Route path='/ReturningUser' component={ReturningUser} />
               <Route component={NotFoundPage} />
             </Switch>
