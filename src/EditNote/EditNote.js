@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
+import { Link } from 'react-router-dom'
 
 const Required = () => (
   <span className='EditNote__required'>*</span>
@@ -162,9 +163,11 @@ export default class EditNote extends Component {
               </div>
 
               <div className='AddNote__buttons'>
+                <Link to='/NotePage'>
                 <button type='button' onClick={this.handleClickCancel}>
                   Cancel
           </button>
+          </Link>
                 {' '}
                 <button type='submit'>
                   Save
