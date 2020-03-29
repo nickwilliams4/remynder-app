@@ -154,11 +154,11 @@ export default class EditNote extends Component {
               </div>
               <div className="frequency-container" className="form-section">
                 <label htmlFor="frequency">How often do you want email remynders? </label>
-                <select title="remynder" id="remynder">
+                <select title="remynder" id="remynder" onChange={this.handleChangeRemynder} >
                   <option value="Every 6 Hours">Every 6 Hours</option>
                   <option value="Every 12 Hours">Every 12 Hours</option>
                   <option value="Every 24 Hours">Every 24 Hours</option>
-                  <option onChange={this.handleChangeRemynder} value="Every 2 days">Every 2 Days</option>
+                  <option value="Every 2 days">Every 2 Days</option>
                 </select>
               </div>
 
