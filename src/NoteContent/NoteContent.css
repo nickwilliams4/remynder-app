@@ -1,8 +1,10 @@
 .NoteContentPage {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .Note_title {
+  border-top: solid;
+  border-bottom: solid;
   font-size: 30px;
 }
 
@@ -11,6 +13,7 @@
 }
 
 .Note__dates-created {
+  border-top: groove;
   margin-top: 75px;
 }
 
