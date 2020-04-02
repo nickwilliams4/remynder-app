@@ -1,35 +1,78 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import Content from '../Content/Content'
+import { Button, Input, Required } from '../Utils/Utils'
+import AuthApiService from '../services/auth-api-service'
 
-export default class HomePageContent extends Component {
+export default class SignUpForm extends Component {
+  static defaultProps = {
+    onRegistrationSuccess: () => { }
+  }
+  state = { error: null }
+
+  handleSubmit = ev => {
+    ev.preventDefault()
+    const { full_name, user_name, password } = ev.target
+
+    this.setState({ error: null })
+    AuthApiService.postUser({
+      user_name: user_name.value,
+      password: password.value,
+      full_name: full_name.value
+    })
+      .then(user => {
+        full_name.value = ''
+        user_name.value = ''
+        password.value = ''
+        this.props.onRegistrationSuccess()
+      })
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
+  }
+
   render() {
+    const { error } = this.state
     return (
-      <Content className='HomePageContent'>
-        <section>
-          <form className='signup-form'>
-            <div>
-              <label htmlFor="first-name">First name: </label>
-              <input placeholder='First Name' type="text" name='first-name' id='first-name' />
-            </div>
-            <div>
-              <label htmlFor="last-name">Last name: </label>
-              <input type="text" name='last-name' id='last-name' placeholder='Last Name' />
-            </div>
-            <div>
-              <label htmlFor="username">Email: </label>
-              <input type="text" name='username' id='username' placeholder="john@lennon.com" />
-            </div>
-            <div>
-              <label htmlFor="password">Password: </label>
-              <input type="password" name='password' id='password' />
-            </div>
-            <Link to='/NotePage'>
-              <button type='submit'>Sign Up</button>
-            </Link>
-          </form>
-        </section>
-      </Content>
+      <form className='RegistrationForm'
+        onSubmit={this.handleSubmit}
+      >
+        {/* <div role='alert'>
+          {error && <p className='red'>{error}</p>}
+        </div> */}
+        <div className='full_name'>
+          <label htmlFor='RegistrationForm__full_name'>Name: {' '} <Required /> </label>
+          <Input
+            placeholder='Name'
+            type="text"
+            name='full_name'
+            id='RegistrationForm__full_name'>
+          </Input>
+        </div>
+        <div className='user_name'>
+          <label htmlFor='RegistrationForm__user_name'>
+            Email: {' '} <Required />
+          </label>
+          <Input
+            type="text"
+            name='user_name'
+            id='RegistrationForm__user_name'
+            placeholder="john@lennon.com">
+          </Input>
+        </div>
+        <div className='password'>
+          <label htmlFor='RegistrationForm__password'>
+            Password: {' '} <Required />
+          </label>
+          <Input
+            name='password'
+            type='password'
+            required
+            id='RegistrationForm__password'>
+          </Input>
+        </div>
+        <Button type='submit'>
+          Register
+        </Button>
+      </form>
     )
   }
 }

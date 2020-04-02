@@ -11,6 +11,9 @@ import config from '../config'
 import ApiContext from '../ApiContext'
 import NoteContent from '../NoteContent/NoteContent'
 import EditNote from '../EditNote/EditNote'
+import PrivateRoute from '../Utils/PrivateRoute'
+import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
+import SignUpForm from '../SignUpForm/SignUpForm'
 
 export default class App extends Component {
   state = {
@@ -72,11 +75,12 @@ editNote = editedNote => {
           <main>
             <Switch>
               <Route exact path='/' component={HomePage} />
-              <Route path='/NotePage'><NotePage /></Route>
-              <Route path="/AddNote" component={AddNote} />
-              <Route path="/note/:note_id" component={NoteContent} />
-              <Route path="/edit/:note_id" component={EditNote} />
-              <Route path='/ReturningUser' component={ReturningUser} />
+              <PrivateRoute path='/NotePage'><NotePage /></PrivateRoute>
+              <PrivateRoute path="/AddNote" component={AddNote} />
+              <PrivateRoute path="/note/:note_id" component={NoteContent} />
+              <PrivateRoute path="/edit/:note_id" component={EditNote} />
+              <PublicOnlyRoute path='/ReturningUser' component={ReturningUser} />
+              <PublicOnlyRoute path='/SignUpForm' component={SignUpForm} />
               <Route component={NotFoundPage} />
             </Switch>
           </main>
