@@ -47,7 +47,7 @@ export default class ReturningUser extends Component {
           </div>
           <div className='user_name'>
             <label htmlFor='LoginForm_user_name'>
-              User name: {' '}
+              Email: {' '}
             </label>
             <Input
               required

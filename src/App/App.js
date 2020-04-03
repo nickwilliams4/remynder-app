@@ -6,14 +6,14 @@ import HomePage from '../HomePage/HomePage'
 import NotePage from '../NotePage/NotePage'
 import AddNote from '../AddNote/AddNote'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
-import ReturningUser from '../ReturningUser/ReturningUser'
 import config from '../config'
 import ApiContext from '../ApiContext'
 import NoteContent from '../NoteContent/NoteContent'
 import EditNote from '../EditNote/EditNote'
 import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
-import SignUpForm from '../SignUpForm/SignUpForm'
+import SignUpPage from '../routes/SignUpPage'
+import ReturningUserPage from '../routes/ReturningUserPage'
 
 export default class App extends Component {
   state = {
@@ -79,8 +79,8 @@ editNote = editedNote => {
               <PrivateRoute path="/AddNote" component={AddNote} />
               <PrivateRoute path="/note/:note_id" component={NoteContent} />
               <PrivateRoute path="/edit/:note_id" component={EditNote} />
-              <PublicOnlyRoute path='/ReturningUser' component={ReturningUser} />
-              <PublicOnlyRoute path='/SignUpForm' component={SignUpForm} />
+              <PublicOnlyRoute path='/ReturningUser' component={ReturningUserPage} />
+              <PublicOnlyRoute path='/SignUpForm' component={SignUpPage} />
               <Route component={NotFoundPage} />
             </Switch>
           </main>

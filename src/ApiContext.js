@@ -4,5 +4,7 @@ export default React.createContext({
   notes: [],
   addNote: () => {},
   deleteNote: () => {},
-  editNote: () => {}
+  editNote: () => {},
+  onLoginSuccess: () => { },
+  onRegistrationSuccess: () => { }
 })
