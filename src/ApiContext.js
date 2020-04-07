@@ -6,5 +6,7 @@ export default React.createContext({
   deleteNote: () => {},
   editNote: () => {},
   onLoginSuccess: () => { },
-  onRegistrationSuccess: () => { }
+  onRegistrationSuccess: () => { },
+  loggedIn: false,
+  updateLoggedIn: () => {}
 })

@@ -17,7 +17,8 @@ import ReturningUserPage from '../routes/ReturningUserPage'
 
 export default class App extends Component {
   state = {
-    notes: []
+    notes: [],
+    loggedIn: false
   };
 
 
@@ -58,13 +59,21 @@ editNote = editedNote => {
   })
 }
 
+updateLoggedIn = loggedIn => {
+  this.setState({
+    loggedIn
+  })
+}
+
 
   render() {
     const contextValue = {
       notes: this.state.notes,
       deleteNote: this.handleDeleteNote,
       addNote: this.addNote,
-      editNote: this.editNote
+      editNote: this.editNote,
+      loggedIn: this.state.loggedIn,
+      updateLoggedIn: this.updateLoggedIn
     }
     return (
       <ApiContext.Provider value={contextValue}>

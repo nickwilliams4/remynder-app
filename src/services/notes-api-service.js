@@ -5,6 +5,7 @@ const NotesApiService = {
   getNotes() {
     return fetch(`${config.API_ENDPOINT}/notes`, {
       headers: {
+        
       },
     })
       .then(res =>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import config from '../config'
 import ApiContext from '../ApiContext'
+import TokenService from '../services/token-service'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
 import './AddNote.css'
 
@@ -27,7 +28,10 @@ export default class AddNote extends Component {
     fetch(`${config.API_ENDPOINT}/notes`, {
       method: 'POST',
       body: JSON.stringify(notes),
-      headers: { 'Content-Type': 'application/json' }
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      }
 
     })
       .then(res => {
@@ -68,25 +72,25 @@ export default class AddNote extends Component {
               </div>
               <div className="form-section">
                 <label htmlFor="title">
-                  Name of Remynder: 
+                  Name of Remynder:
                   {' '}
-                  </label>
-                  <Required />
-                <input 
-                  type="text" 
-                  title="title" 
+                </label>
+                <Required />
+                <input
+                  type="text"
+                  title="title"
                   id="title"
-                  placeholder="Call Jane" 
+                  placeholder="Call Jane"
                   required>
-                  </input>
+                </input>
               </div>
               <div>
                 <label htmlFor="content">
                   What's on your mynd?
                   {''}
                   <Required />
-                  </label>
-                  <textarea title="content" id="content" rows="15" required></textarea>
+                </label>
+                <textarea title="content" id="content" rows="15" required></textarea>
               </div>
               <div className="frequency-container" className="form-section">
                 <label htmlFor="frequency">How often do you want email remynders? </label>
@@ -97,16 +101,16 @@ export default class AddNote extends Component {
                   <option value="Every 2 days">Every 2 Days</option>
                 </select>
               </div>
-              
+
               <div className='AddNote__buttons'>
-            <button type='button' onClick={this.handleClickCancel}>
-              Cancel
+                <button type='button' onClick={this.handleClickCancel}>
+                  Cancel
             </button>
-            {' '}
-            <button type='submit'>
-              Save
+                {' '}
+                <button type='submit'>
+                  Save
             </button>
-          </div>
+              </div>
             </form>
           </main>
         </section>

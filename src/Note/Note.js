@@ -4,6 +4,7 @@ import ApiContext from '../ApiContext'
 import config from '../config'
 import moment from 'moment'
 import './Note.css'
+import TokenService from '../services/token-service'
 
 export default class Note extends Component {
   static defaultProps ={
@@ -18,7 +19,8 @@ export default class Note extends Component {
     fetch(`${config.API_ENDPOINT}/notes/${note_id}`, {
       method: 'DELETE',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`
       },
     })
       .then(res => {

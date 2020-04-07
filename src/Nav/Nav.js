@@ -3,11 +3,14 @@ import React, { Component } from 'react'
 import { Hyph } from '../Utils/Utils'
 import TokenService from '../services/token-service'
 import './Nav.css'
+import ApiContext from '../ApiContext'
 
 export default class Nav extends Component {
   handleLogoutClick = () => {
     TokenService.clearAuthToken()
   }
+
+  static contextType = ApiContext;
 
   renderLogoutLink() {
     return (
@@ -42,7 +45,7 @@ export default class Nav extends Component {
         <Link to='/'>
           Remynder
         </Link>
-        {TokenService.hasAuthToken()
+        {this.context.loggedIn
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
       </nav>

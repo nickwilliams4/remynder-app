@@ -3,6 +3,7 @@ import ApiContext from '../ApiContext'
 import config from '../config'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
 import { Link } from 'react-router-dom'
+import TokenService from '../services/token-service'
 
 const Required = () => (
   <span className='EditNote__required'>*</span>
@@ -70,6 +71,7 @@ export default class EditNote extends Component {
       body: JSON.stringify(editNote),
       headers: {
         'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`
       },
     })
       .then(res => {

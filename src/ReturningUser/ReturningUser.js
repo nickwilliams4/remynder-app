@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TokenService from '../services/token-service'
 import AuthApiService from '../services/auth-api-service'
 import { Button, Input } from '../Utils/Utils'
+import ApiContext from '../ApiContext'
 
 export default class ReturningUser extends Component {
   static defaultProps = {
@@ -9,6 +10,8 @@ export default class ReturningUser extends Component {
   }
 
   state = { error: null }
+
+  static contextType = ApiContext;
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault()
@@ -23,6 +26,7 @@ export default class ReturningUser extends Component {
         user_name.value = ''
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
+        this.context.updateLoggedIn(true)
         this.props.onLoginSuccess()
       })
       .catch(res => {
