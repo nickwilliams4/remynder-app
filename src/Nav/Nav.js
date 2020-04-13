@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
-import { Hyph } from '../Utils/Utils'
 import TokenService from '../services/token-service'
 import './Nav.css'
 import ApiContext from '../ApiContext'
@@ -8,6 +7,7 @@ import ApiContext from '../ApiContext'
 export default class Nav extends Component {
   handleLogoutClick = () => {
     TokenService.clearAuthToken()
+    this.context.updateLoggedIn(false)
   }
 
   static contextType = ApiContext;

@@ -8,5 +8,6 @@ export default React.createContext({
   onLoginSuccess: () => { },
   onRegistrationSuccess: () => { },
   loggedIn: false,
-  updateLoggedIn: () => {}
+  updateLoggedIn: () => {},
+  setNotes: () => {}
 })

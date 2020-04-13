@@ -6,7 +6,6 @@ import HomePage from '../HomePage/HomePage'
 import NotePage from '../NotePage/NotePage'
 import AddNote from '../AddNote/AddNote'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
-import config from '../config'
 import ApiContext from '../ApiContext'
 import NoteContent from '../NoteContent/NoteContent'
 import EditNote from '../EditNote/EditNote'
@@ -22,20 +21,6 @@ export default class App extends Component {
   };
 
 
-  componentDidMount() {
-    fetch(`${config.API_ENDPOINT}/notes`)
-      .then((notesRes) => {
-        if (!notesRes.ok)
-          return notesRes.json().then(e => Promise.reject(e));
-        return notesRes.json();
-      })
-      .then((notes) => {
-        this.setState({ notes });
-      })
-      .catch(error => {
-        console.error({ error });
-      });
-  }
 
   handleDeleteNote = note_id => {
     this.setState({
@@ -65,6 +50,12 @@ updateLoggedIn = loggedIn => {
   })
 }
 
+setNotes = notes => {
+  this.setState({
+    notes
+  })
+}
+
 
   render() {
     const contextValue = {
@@ -73,7 +64,8 @@ updateLoggedIn = loggedIn => {
       addNote: this.addNote,
       editNote: this.editNote,
       loggedIn: this.state.loggedIn,
-      updateLoggedIn: this.updateLoggedIn
+      updateLoggedIn: this.updateLoggedIn,
+      setNotes: this.setNotes
     }
     return (
       <ApiContext.Provider value={contextValue}>

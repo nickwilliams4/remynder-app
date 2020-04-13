@@ -51,7 +51,7 @@ export default class AddNote extends Component {
       })
   }
   handleClickCancel = () => {
-    this.props.history.push('/')
+    this.props.history.push('/NotePage')
   };
 
   render() {
@@ -92,13 +92,13 @@ export default class AddNote extends Component {
                 </label>
                 <textarea title="content" id="content" rows="15" required></textarea>
               </div>
-              <div className="frequency-container" className="form-section">
+              <div className="frequency-container">
                 <label htmlFor="frequency">How often do you want email remynders? </label>
                 <select title="remynder" id="remynder">
-                  <option value="Every 6 Hours">Every 6 Hours</option>
-                  <option value="Every 12 Hours">Every 12 Hours</option>
-                  <option value="Every 24 Hours">Every 24 Hours</option>
-                  <option value="Every 2 days">Every 2 Days</option>
+                  <option value="6">Every 6 Hours</option>
+                  <option value="12">Every 12 Hours</option>
+                  <option value="24">Every 24 Hours</option>
+                  <option value="48">Every 2 Days</option>
                 </select>
               </div>
 

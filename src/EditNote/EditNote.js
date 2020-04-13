@@ -26,7 +26,8 @@ export default class EditNote extends Component {
     fetch(`${config.API_ENDPOINT}/notes/${note_id}`, {
       method: 'GET',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`
       },
     })
       .then(res => {
@@ -104,8 +105,7 @@ export default class EditNote extends Component {
   };
 
   render() {
-    const { error, id, title, content, created, remynder } = this.state
-    const note = { id, title, content, created, remynder }
+    const { error, title, content } = this.state
     return (
       <NotFoundPage>
         <section className='EditNote'>
@@ -154,13 +154,13 @@ export default class EditNote extends Component {
                   onChange={this.handleChangeContent}>
                  </textarea>
               </div>
-              <div className="frequency-container" className="form-section">
+              <div className="frequency-container">
                 <label htmlFor="frequency">How often do you want email remynders? </label>
                 <select title="remynder" id="remynder" onChange={this.handleChangeRemynder} >
-                  <option value="Every 6 Hours">Every 6 Hours</option>
-                  <option value="Every 12 Hours">Every 12 Hours</option>
-                  <option value="Every 24 Hours">Every 24 Hours</option>
-                  <option value="Every 2 days">Every 2 Days</option>
+                <option value="6">Every 6 Hours</option>
+                  <option value="12">Every 12 Hours</option>
+                  <option value="24">Every 24 Hours</option>
+                  <option value="48">Every 2 Days</option>
                 </select>
               </div>
 

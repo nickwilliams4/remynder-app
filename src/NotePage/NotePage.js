@@ -3,9 +3,32 @@ import { Link } from 'react-router-dom'
 import './NotePage.css'
 import Note from '../Note/Note'
 import ApiContext from '../ApiContext'
+import config from '../config'
+import TokenService from '../services/token-service'
 
 export default class NotePage extends Component {
   static contextType = ApiContext
+
+  componentDidMount() {
+    fetch(`${config.API_ENDPOINT}/notes`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      },
+    })
+    
+      .then((notesRes) => {
+        if (!notesRes.ok)
+          return notesRes.json().then(e => Promise.reject(e));
+        return notesRes.json();
+      })
+      .then((notes) => {
+        this.context.setNotes( notes );
+      })
+      .catch(error => {
+        console.error({ error });
+      });
+  }
 
   render() {
     const { notes = [] } = this.context
