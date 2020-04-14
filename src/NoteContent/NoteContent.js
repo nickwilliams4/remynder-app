@@ -33,7 +33,7 @@ export default class NoteContent extends React.Component {
           </span>
         </div>
       </div>
-      <p>Remynder: {note.remynder}</p>
+      <p>Remynder: Every {note.remynder} hours</p>
       <Link to='/NotePage'>
       <button>Back</button>
     </Link>
