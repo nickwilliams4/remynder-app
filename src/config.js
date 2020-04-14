@@ -1,4 +1,4 @@
 export default {
-  API_ENDPOINT: 'http://localhost:8000',
+  API_ENDPOINT: 'https://desolate-reaches-70063.herokuapp.com',
   TOKEN_KEY: 'remynder-client-auth-token'
 }
