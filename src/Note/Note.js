@@ -57,7 +57,7 @@ export default class Note extends Component {
       </div>
       <div className='Note__Content'>
       </div>
-      <p>Remynder: {remynder}</p>
+      <p>Remynder: Every {remynder} hours</p>
       <Link to={`edit/${id}`}>
       <button
         className='Note_edit'
