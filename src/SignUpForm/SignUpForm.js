@@ -86,6 +86,7 @@ export default class SignUpForm extends Component {
             id='RegistrationForm__password'>
           </Input>
         </div>
+        {this.state.error ? <div>{this.state.error}</div> : ' '}
         <div>*Password must be at least 8 characters, contain a capital letter, a number, and a special character.</div>
         <Button type='submit'>
           Register
