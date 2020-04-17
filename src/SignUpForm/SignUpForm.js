@@ -22,12 +22,18 @@ export default class SignUpForm extends Component {
       full_name: full_name.value
     })
       .then(user => {
-        full_name.value = ''
-        user_name.value = ''
-        password.value = ''
-        TokenService.saveAuthToken(user.authToken)
-        this.context.updateLoggedIn(true)
-        this.props.onRegistrationSuccess()
+        return AuthApiService.postLogin({
+          user_name: user_name.value,
+          password: password.value,
+        })
+          .then(res => {
+            full_name.value = ''
+            user_name.value = ''
+            password.value = ''
+            TokenService.saveAuthToken(res.authToken)
+            this.context.updateLoggedIn(true)
+            this.props.onRegistrationSuccess()
+          })
       })
       .catch(res => {
         this.setState({ error: res.error })

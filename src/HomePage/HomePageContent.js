@@ -32,7 +32,7 @@ export default class HomePageContent extends Component {
         </section>
         <section>
           <header>
-            <h3>Start maximizing your production now!</h3>
+            <h3>Start maximizing your productivity now!</h3>
           </header>
           </section>
       </Content>
