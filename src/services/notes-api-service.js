@@ -5,7 +5,7 @@ const NotesApiService = {
   getNotes() {
     return fetch(`${config.API_ENDPOINT}/notes`, {
       headers: {
-        
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(res =>
