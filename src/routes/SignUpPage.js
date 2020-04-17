@@ -13,6 +13,7 @@ export default class RegistrationPage extends Component {
   handleRegistrationSuccess = () => {
     const { location, history } = this.props
     const destination = (location.state || {}).from || '/NotePage'
+    console.log(destination)
     history.push(destination)
   }
 
