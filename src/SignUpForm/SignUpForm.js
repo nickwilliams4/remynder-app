@@ -87,7 +87,7 @@ export default class SignUpForm extends Component {
           </Input>
         </div>
         {' '}
-        {this.state.error ? <div>{this.state.error}</div> : ' '}
+        {this.state.error ? <div>{alert(this.state.error)}</div> : ' '}
         <Button type='submit'>
           Register
         </Button>
