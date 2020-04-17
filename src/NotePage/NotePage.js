@@ -5,6 +5,7 @@ import Note from '../Note/Note'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import TokenService from '../services/token-service'
+import SignUpForm from '../SignUpForm/SignUpForm'
 
 export default class NotePage extends Component {
   static contextType = ApiContext
@@ -37,6 +38,9 @@ export default class NotePage extends Component {
         <header role="banner">
           <h1>Your Remynders</h1>
         </header>
+        <div>
+          
+        </div>
         <section>
           <header>
             <h2 className='newRemynder'>Create New Remynder</h2>
