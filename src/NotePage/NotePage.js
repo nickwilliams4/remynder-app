@@ -41,7 +41,7 @@ export default class NotePage extends Component {
           <header>
             <h2 className='newRemynder'>Create New Remynder</h2>
             <Link to='/AddNote'>
-              <button>New Reynder</button>
+              <button>New Remynder</button>
             </Link>
           </header>
         </section>
