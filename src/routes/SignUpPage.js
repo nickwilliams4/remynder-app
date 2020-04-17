@@ -4,14 +4,16 @@ import { Section } from '../Utils/Utils'
 
 export default class RegistrationPage extends Component {
   static defaultProps = {
+    location: {},
     history: {
       push: () => {},
     },
   }
 
-  handleRegistrationSuccess = user => {
-    const { history } = this.props
-    history.push('/NotePage')
+  handleRegistrationSuccess = () => {
+    const { location, history } = this.props
+    const destination = (location.state || {}).from || '/NotePage'
+    history.push(destination)
   }
 
   render() {
