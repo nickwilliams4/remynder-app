@@ -23,6 +23,8 @@ export default class SignUpForm extends Component {
         full_name.value = ''
         user_name.value = ''
         password.value = ''
+        TokenService.saveAuthToken(res.authToken)
+        this.context.updateLoggedIn(true)
         this.props.onRegistrationSuccess()
       })
       .catch(res => {
