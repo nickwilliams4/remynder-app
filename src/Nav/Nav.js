@@ -27,13 +27,15 @@ export default class Nav extends Component {
   renderLoginLink() {
     return (
       <div className='Header__not-logged-in'>
-         <Link
-          to='/SignUpForm'>
-          Register
+        <div className='register'>
+          <Link
+            to='/SignUpForm'>
+            Register
         </Link>
+        </div>
         <Link
           to='/ReturningUser'>
-          Log in
+          Log In
         </Link>
       </div>
     )
@@ -42,12 +44,14 @@ export default class Nav extends Component {
   render() {
     return (
       <nav className='Nav'>
-        <Link to='/'>
-          Remynder
+        <div className='remynder'>
+          <Link to='/'>
+            Remynder
         </Link>
-        {this.context.loggedIn
-          ? this.renderLogoutLink()
-          : this.renderLoginLink()}
+        </div>
+          {this.context.loggedIn
+            ? this.renderLogoutLink()
+            : this.renderLoginLink()}
       </nav>
     )
   }

@@ -1,4 +1,7 @@
-Footer {
+.Footer {
   border-top: double;
-  margin-top: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }

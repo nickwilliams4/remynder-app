@@ -4,7 +4,6 @@ import config from '../config'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
 import { Link } from 'react-router-dom'
 import TokenService from '../services/token-service'
-import './EditNote.css'
 
 const Required = () => (
   <span className='EditNote__required'>*</span>
@@ -23,7 +22,8 @@ export default class EditNote extends Component {
   };
 
   componentDidMount() {
-    fetch(`${config.API_ENDPOINT}/notes`, {
+    const note_id = this.props.match.params.note_id
+    fetch(`${config.API_ENDPOINT}/notes/${note_id}`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json',

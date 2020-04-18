@@ -13,6 +13,7 @@ import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import SignUpPage from '../routes/SignUpPage'
 import ReturningUserPage from '../routes/ReturningUserPage'
+import './App.css'
 
 export default class App extends Component {
   state = {

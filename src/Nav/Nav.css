@@ -13,3 +13,15 @@
 .Nav a:not(:last-of-type) {
   margin-right: 120px;
 }
+
+.remynder {
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .Header__not-logged-in, .Header__logged-in {
+    position: absolute;
+    margin-top: -28px;
+    margin-left: 310px;
+  }
+}
