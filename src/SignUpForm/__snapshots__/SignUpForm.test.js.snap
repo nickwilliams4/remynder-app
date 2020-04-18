@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUpForm component renders a form.SignUpForm by default 1`] = `
+<form
+  className="RegistrationForm"
+  onSubmit={[Function]}
+>
+  <div>
+    <h1>
+      Welcome!
+    </h1>
+  </div>
+  <div>
+    <h3>
+      Please fill out the form below
+    </h3>
+  </div>
+  <div
+    className="full_name"
+  >
+    <label
+      htmlFor="RegistrationForm__full_name"
+    >
+      Name: 
+       
+       
+      <Required />
+       
+    </label>
+    <Input
+      id="RegistrationForm__full_name"
+      name="full_name"
+      placeholder="Name"
+      type="text"
+    />
+  </div>
+  <div
+    className="user_name"
+  >
+    <label
+      htmlFor="RegistrationForm__user_name"
+    >
+      Email: 
+       
+       
+      <Required />
+    </label>
+    <Input
+      id="RegistrationForm__user_name"
+      name="user_name"
+      placeholder="john@lennon.com"
+      type="text"
+    />
+  </div>
+  <div
+    className="password"
+  >
+    <label
+      htmlFor="RegistrationForm__password"
+    >
+      Password: 
+       
+       
+      <Required />
+    </label>
+    <Input
+      id="RegistrationForm__password"
+      name="password"
+      required={true}
+      type="password"
+    />
+  </div>
+   
+   
+  <Button
+    type="submit"
+  >
+    Register
+  </Button>
+</form>
+`;
+
+exports[`SignUpForm component renders the SignUpForm given props 1`] = `
+<form
+  className="RegistrationForm"
+  onSubmit={[Function]}
+>
+  <div>
+    <h1>
+      Welcome!
+    </h1>
+  </div>
+  <div>
+    <h3>
+      Please fill out the form below
+    </h3>
+  </div>
+  <div
+    className="full_name"
+  >
+    <label
+      htmlFor="RegistrationForm__full_name"
+    >
+      Name: 
+       
+       
+      <Required />
+       
+    </label>
+    <Input
+      id="RegistrationForm__full_name"
+      name="full_name"
+      placeholder="Name"
+      type="text"
+    />
+  </div>
+  <div
+    className="user_name"
+  >
+    <label
+      htmlFor="RegistrationForm__user_name"
+    >
+      Email: 
+       
+       
+      <Required />
+    </label>
+    <Input
+      id="RegistrationForm__user_name"
+      name="user_name"
+      placeholder="john@lennon.com"
+      type="text"
+    />
+  </div>
+  <div
+    className="password"
+  >
+    <label
+      htmlFor="RegistrationForm__password"
+    >
+      Password: 
+       
+       
+      <Required />
+    </label>
+    <Input
+      id="RegistrationForm__password"
+      name="password"
+      required={true}
+      type="password"
+    />
+  </div>
+   
+   
+  <Button
+    type="submit"
+  >
+    Register
+  </Button>
+</form>
+`;

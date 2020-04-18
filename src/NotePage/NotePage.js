@@ -5,7 +5,6 @@ import Note from '../Note/Note'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import TokenService from '../services/token-service'
-import SignUpForm from '../SignUpForm/SignUpForm'
 
 export default class NotePage extends Component {
   static contextType = ApiContext

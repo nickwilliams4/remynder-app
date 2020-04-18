@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage component renders the HomePage given props 1`] = `
+<Content
+  className="HomePage"
+>
+  <main
+    role="main"
+  >
+    <HomePageContent />
+    <Link
+      to="/SignUpForm"
+    >
+      <button
+        type="submit"
+      >
+        Sign Up!
+      </button>
+    </Link>
+  </main>
+</Content>
+`;

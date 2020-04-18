@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Note component renders the Nav 1`] = `
+<nav
+  className="Nav"
+>
+  <Link
+    to="/"
+  >
+    Remynder
+  </Link>
+  <div
+    className="Header__not-logged-in"
+  >
+    <Link
+      to="/SignUpForm"
+    >
+      Register
+    </Link>
+    <Link
+      to="/ReturningUser"
+    >
+      Log in
+    </Link>
+  </div>
+</nav>
+`;

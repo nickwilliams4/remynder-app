@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditNote component renders a form.EditNote by default 1`] = `
+<NotFoundPage>
+  <section
+    className="EditNote"
+  >
+    <main
+      role="main"
+    >
+      <header>
+        <h1>
+          Edit Remynder
+        </h1>
+      </header>
+      <form
+        className="EditNote_form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="EditNote__error"
+          role="alert"
+        />
+        <input
+          name="id"
+          type="hidden"
+        />
+        <div
+          className="form-section"
+        >
+          <label
+            htmlFor="title"
+          >
+            Name of Remynder:
+             
+          </label>
+          <Required />
+          <input
+            id="title"
+            onChange={[Function]}
+            required={true}
+            title="title"
+            type="text"
+            value={null}
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="content"
+          >
+            What's on your mynd?
+            <Required />
+          </label>
+          <textarea
+            id="content"
+            onChange={[Function]}
+            required={true}
+            rows="15"
+            title="content"
+            value={null}
+          />
+        </div>
+        <div
+          className="frequency-container"
+        >
+          <label
+            htmlFor="frequency"
+          >
+            How often do you want email remynders? 
+          </label>
+          <select
+            id="remynder"
+            onChange={[Function]}
+            title="remynder"
+          >
+            <option
+              value="6"
+            >
+              Every 6 Hours
+            </option>
+            <option
+              value="12"
+            >
+              Every 12 Hours
+            </option>
+            <option
+              value="24"
+            >
+              Every 24 Hours
+            </option>
+            <option
+              value="48"
+            >
+              Every 2 Days
+            </option>
+          </select>
+        </div>
+        <div
+          className="AddNote__buttons"
+        >
+          <Link
+            to="/NotePage"
+          >
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              Cancel
+            </button>
+          </Link>
+           
+          <button
+            type="submit"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </main>
+  </section>
+</NotFoundPage>
+`;
+
+exports[`EditNote component renders the EditNote given props 1`] = `
+<NotFoundPage>
+  <section
+    className="EditNote"
+  >
+    <main
+      role="main"
+    >
+      <header>
+        <h1>
+          Edit Remynder
+        </h1>
+      </header>
+      <form
+        className="EditNote_form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="EditNote__error"
+          role="alert"
+        />
+        <input
+          name="id"
+          type="hidden"
+        />
+        <div
+          className="form-section"
+        >
+          <label
+            htmlFor="title"
+          >
+            Name of Remynder:
+             
+          </label>
+          <Required />
+          <input
+            id="title"
+            onChange={[Function]}
+            required={true}
+            title="title"
+            type="text"
+            value={null}
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="content"
+          >
+            What's on your mynd?
+            <Required />
+          </label>
+          <textarea
+            id="content"
+            onChange={[Function]}
+            required={true}
+            rows="15"
+            title="content"
+            value={null}
+          />
+        </div>
+        <div
+          className="frequency-container"
+        >
+          <label
+            htmlFor="frequency"
+          >
+            How often do you want email remynders? 
+          </label>
+          <select
+            id="remynder"
+            onChange={[Function]}
+            title="remynder"
+          >
+            <option
+              value="6"
+            >
+              Every 6 Hours
+            </option>
+            <option
+              value="12"
+            >
+              Every 12 Hours
+            </option>
+            <option
+              value="24"
+            >
+              Every 24 Hours
+            </option>
+            <option
+              value="48"
+            >
+              Every 2 Days
+            </option>
+          </select>
+        </div>
+        <div
+          className="AddNote__buttons"
+        >
+          <Link
+            to="/NotePage"
+          >
+            <button
+              onClick={[Function]}
+              type="button"
+            >
+              Cancel
+            </button>
+          </Link>
+           
+          <button
+            type="submit"
+          >
+            Save
+          </button>
+        </div>
+      </form>
+    </main>
+  </section>
+</NotFoundPage>
+`;

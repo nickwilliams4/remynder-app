@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotePage component renders the NotePage 1`] = `
+<main
+  role="main"
+>
+  <header
+    role="banner"
+  >
+    <h1>
+      Your Remynders
+    </h1>
+  </header>
+  <div />
+  <section>
+    <header>
+      <h2
+        className="newRemynder"
+      >
+        Create New Remynder
+      </h2>
+      <Link
+        to="/AddNote"
+      >
+        <button>
+          New Remynder
+        </button>
+      </Link>
+    </header>
+  </section>
+  <section
+    className="NoteList"
+  >
+    <ul />
+  </section>
+</main>
+`;

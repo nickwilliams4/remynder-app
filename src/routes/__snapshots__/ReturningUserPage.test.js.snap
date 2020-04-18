@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReturningUserPage component renders the ReturningUser 1`] = `
+<Section
+  className="LoginPage"
+>
+  <ReturningUser
+    onLoginSuccess={[Function]}
+  />
+</Section>
+`;

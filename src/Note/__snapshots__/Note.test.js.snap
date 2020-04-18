@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Note component renders the Note 1`] = `
+<div
+  className="Note"
+>
+  <h2
+    className="Note__title"
+  >
+    <Link
+      to="/note/a"
+    />
+  </h2>
+  <h4 />
+  <div
+    className="Note__dates"
+  >
+    <div
+      className="Note__dates-modified"
+    >
+      Created:
+       
+      <span
+        className="Date"
+      >
+        Apr 18th 2020
+      </span>
+    </div>
+  </div>
+  <div
+    className="Note__Content"
+  />
+  <p>
+    Remynder: Every 
+     hours
+  </p>
+  <Link
+    to="edit/a"
+  >
+    <button
+      className="Note_edit"
+      type="button"
+    >
+      Edit
+    </button>
+  </Link>
+  <button
+    className="Note__delete"
+    onClick={[Function]}
+    type="button"
+  >
+     
+    Delete
+  </button>
+</div>
+`;

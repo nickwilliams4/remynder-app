@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoteContent component renders the NoteContent 1`] = `
+<div
+  className="NoteContentPage"
+>
+  <div
+    className="Note_title"
+  />
+  <h4
+    className="NoteContent"
+  />
+  <div
+    className="Note__dates"
+  >
+    <div
+      className="Note__dates-created"
+    >
+      Created:
+       
+      <span
+        className="Date"
+      >
+        Apr 18th 2020
+      </span>
+    </div>
+  </div>
+  <p>
+    Remynder: Every 
+     hours
+  </p>
+  <Link
+    to="/NotePage"
+  >
+    <button>
+      Back
+    </button>
+  </Link>
+</div>
+`;
