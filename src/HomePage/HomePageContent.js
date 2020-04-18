@@ -28,7 +28,7 @@ export default class HomePageContent extends Component {
             <h3>Keep remynders coming</h3>
           </header>
           <p>[<em>placeholder for screenshot of emailed reminders</em>]</p>
-          <p>This application will make you more productive by sending remynders to your inbox as often as you would like until you complete your task. Checking our email often is something we are all accustomed to doing so give yourself an edge to get things done.</p>
+          <p>We check our emails dozens of times a day.  Remynder streamlines the process of getting task notifications into one location so there's no need to check multiple applications.</p>
         </section>
         <section>
           <header>
