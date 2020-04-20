@@ -8,15 +8,6 @@ exports[`HomePage component renders the HomePage given props 1`] = `
     role="main"
   >
     <HomePageContent />
-    <Link
-      to="/SignUpForm"
-    >
-      <button
-        type="submit"
-      >
-        Sign Up!
-      </button>
-    </Link>
   </main>
 </Content>
 `;

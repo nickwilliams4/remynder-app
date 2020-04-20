@@ -4,6 +4,8 @@ import config from '../config'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
 import { Link } from 'react-router-dom'
 import TokenService from '../services/token-service'
+import './EditNote.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Required = () => (
   <span className='EditNote__required'>*</span>
@@ -136,6 +138,7 @@ export default class EditNote extends Component {
                   id="title"
                   value={title}
                   required
+                  className="user-name-field"
                   onChange={this.handleChangeTitle}>
                 </input>
               </div>
@@ -166,13 +169,15 @@ export default class EditNote extends Component {
 
               <div className='AddNote__buttons'>
                 <Link to='/NotePage'>
-                <button type='button' onClick={this.handleClickCancel}>
+                <button type='button' className='cancel' onClick={this.handleClickCancel}>
                   Cancel
+                  <FontAwesomeIcon icon='ban' className="button-icon"/>
           </button>
           </Link>
                 {' '}
-                <button type='submit'>
+                <button type='submit'className='save'>
                   Save
+                  <FontAwesomeIcon icon='save' className="button-icon"/>
           </button>
               </div>
             </form>

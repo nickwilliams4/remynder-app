@@ -1,4 +1,4 @@
-.RegistrationForm {
+.ReturningUser {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +7,7 @@
   height: calc(100vh - 161px);
 }
 
-.full-form {
+.LoginForm {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,18 +17,20 @@
   padding-bottom: 60px;
 }
 
-.full-form input, .full_name, .user_name, .password {
+.LoginForm input, .user_name, .password {
   width: 100%;
-  margin-bottom: 5px;
-  min-width: 150px;
   border-radius: 10px;
+}
+
+.user_name, .password {
+  margin-bottom: 20px;
 }
 
 .user-name-field {
   height: 30px;
 }
 
-.new-user-login-button {
+.returning-user-login-button {
   height: 50px;
   width: 100px;
   border-radius: 20px;
@@ -38,7 +40,7 @@
   margin: 8px;
 }
 
-.new-user-login-button:hover {
+.returning-user-login-button:hover {
   color: black;
   background-color: white;
 }

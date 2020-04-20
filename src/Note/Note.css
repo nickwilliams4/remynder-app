@@ -1,17 +1,34 @@
-.newRemynder {
-  text-decoration: underline;
+ul {
+  padding: 0;
 }
 
-section {
-  border-bottom: solid;
-  border-width: thin;
+.Note_edit, .Note__delete {
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  margin: 8px;
+}
+
+.button-icon {
+  margin-left: 10px;
+}
+
+.reminder-action-button {
+  cursor: pointer;
 }
 
 .Note {
-  border-bottom: solid;
-  border-width: thin;
+  text-align: center;
 }
 
-ul {
-  padding: 0;
+.Note__title a {
+  color: black;
+}
+
+.Note_edit:hover, .Note__delete:hover {
+  color: black;
+  background-color: white;
 }

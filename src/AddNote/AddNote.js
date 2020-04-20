@@ -4,6 +4,7 @@ import ApiContext from '../ApiContext'
 import TokenService from '../services/token-service'
 import NotFoundPage from '../NotFoundPage/NotFoundPage'
 import './AddNote.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Required = () => (
   <span className='AddNote__required'>*</span>
@@ -81,6 +82,7 @@ export default class AddNote extends Component {
                   title="title"
                   id="title"
                   placeholder="Call Jane"
+                  className="user-name-field"
                   required>
                 </input>
               </div>
@@ -104,12 +106,14 @@ export default class AddNote extends Component {
               </div>
 
               <div className='AddNote__buttons'>
-                <button type='button' onClick={this.handleClickCancel}>
+                <button type='button' className='cancel' onClick={this.handleClickCancel}>
                   Cancel
+                  <FontAwesomeIcon icon='ban' className="button-icon"/>
             </button>
                 {' '}
-                <button type='submit'>
+                <button type='submit' className='save'>
                   Save
+                  <FontAwesomeIcon icon='save' className="button-icon"/>
             </button>
               </div>
             </form>

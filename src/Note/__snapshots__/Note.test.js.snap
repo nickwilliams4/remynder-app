@@ -23,7 +23,7 @@ exports[`Note component renders the Note 1`] = `
       <span
         className="Date"
       >
-        Apr 18th 2020
+        Apr 20th 2020
       </span>
     </div>
   </div>
@@ -38,19 +38,57 @@ exports[`Note component renders the Note 1`] = `
     to="edit/a"
   >
     <button
-      className="Note_edit"
+      className="Note_edit reminder-action-button"
       type="button"
     >
       Edit
+      <FontAwesomeIcon
+        border={false}
+        className="button-icon"
+        fixedWidth={false}
+        flip={null}
+        icon="edit"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
     </button>
   </Link>
   <button
-    className="Note__delete"
+    className="Note__delete reminder-action-button"
     onClick={[Function]}
     type="button"
   >
      
     Delete
+    <FontAwesomeIcon
+      border={false}
+      className="button-icon"
+      fixedWidth={false}
+      flip={null}
+      icon="trash-alt"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
   </button>
 </div>
 `;

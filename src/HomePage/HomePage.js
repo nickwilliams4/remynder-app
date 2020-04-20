@@ -10,9 +10,6 @@ export default class HomePage extends Component {
       <Content className='HomePage'>
         <main role="main">
           <HomePageContent />
-          <Link to='/SignUpForm'>
-              <button type='submit'>Sign Up!</button>
-            </Link>
         </main>
       </Content>
     )

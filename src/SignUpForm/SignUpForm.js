@@ -55,13 +55,15 @@ export default class SignUpForm extends Component {
         <div>
           <h3>Please fill out the form below</h3>
         </div>
+        <div className='full-form'>
         <div className='full_name'>
           <label htmlFor='RegistrationForm__full_name'>Name: {' '} <Required /> </label>
           <Input
             placeholder='Name'
             type="text"
             name='full_name'
-            id='RegistrationForm__full_name'>
+            id='RegistrationForm__full_name'
+            class="user-name-field">
           </Input>
         </div>
         <div className='user_name'>
@@ -72,7 +74,8 @@ export default class SignUpForm extends Component {
             type="text"
             name='user_name'
             id='RegistrationForm__user_name'
-            placeholder="john@lennon.com">
+            placeholder="john@lennon.com"
+            class="user-name-field">
           </Input>
         </div>
         <div className='password'>
@@ -83,14 +86,16 @@ export default class SignUpForm extends Component {
             name='password'
             type='password'
             required
-            id='RegistrationForm__password'>
+            id='RegistrationForm__password'
+            class="user-name-field">
           </Input>
         </div>
         {' '}
         {this.state.error ? <div>{alert(this.state.error)}</div> : ' '}
-        <Button type='submit'>
+        <Button type='submit' class="new-user-login-button">
           Register
         </Button>
+        </div>
       </form>
     )
   }

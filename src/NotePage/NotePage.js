@@ -5,6 +5,7 @@ import Note from '../Note/Note'
 import ApiContext from '../ApiContext'
 import config from '../config'
 import TokenService from '../services/token-service'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class NotePage extends Component {
   static contextType = ApiContext
@@ -33,25 +34,25 @@ export default class NotePage extends Component {
   render() {
     const { notes = [] } = this.context
     return (
-      <main role="main">
+      <main role="main" className="note-page-container">
         <header role="banner">
           <h1>Your Remynders</h1>
         </header>
         <div>
           
         </div>
-        <section>
-          <header>
-            <h2 className='newRemynder'>Create New Remynder</h2>
+        <section className="create-new-reminder">
+            <h2 className='create-new-reminder-heading'>Create New Remynder</h2>
             <Link to='/AddNote'>
-              <button>New Remynder</button>
+              <button className="new-reminder-button">New Remynder
+              <FontAwesomeIcon icon='plus-circle' className="button-icon"/>
+              </button>
             </Link>
-          </header>
         </section>
         <section className='NoteList'>
-          <ul>
+          <ul className="notes-container">
             {notes.map(note =>
-              <li key={note.id}>
+              <li key={note.id} className="note-list-item">
                 <Note
                   id={note.id}
                   title={note.title}

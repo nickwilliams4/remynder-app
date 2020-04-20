@@ -21,7 +21,7 @@ exports[`NoteContent component renders the NoteContent 1`] = `
       <span
         className="Date"
       >
-        Apr 18th 2020
+        Apr 20th 2020
       </span>
     </div>
   </div>
@@ -32,7 +32,28 @@ exports[`NoteContent component renders the NoteContent 1`] = `
   <Link
     to="/NotePage"
   >
-    <button>
+    <button
+      className="back-button"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className="back-button-icon"
+        fixedWidth={false}
+        flip={null}
+        icon="angle-double-left"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
       Back
     </button>
   </Link>

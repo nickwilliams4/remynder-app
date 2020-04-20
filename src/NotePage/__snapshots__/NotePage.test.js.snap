@@ -2,6 +2,7 @@
 
 exports[`NotePage component renders the NotePage 1`] = `
 <main
+  className="note-page-container"
   role="main"
 >
   <header
@@ -12,26 +13,49 @@ exports[`NotePage component renders the NotePage 1`] = `
     </h1>
   </header>
   <div />
-  <section>
-    <header>
-      <h2
-        className="newRemynder"
+  <section
+    className="create-new-reminder"
+  >
+    <h2
+      className="create-new-reminder-heading"
+    >
+      Create New Remynder
+    </h2>
+    <Link
+      to="/AddNote"
+    >
+      <button
+        className="new-reminder-button"
       >
-        Create New Remynder
-      </h2>
-      <Link
-        to="/AddNote"
-      >
-        <button>
-          New Remynder
-        </button>
-      </Link>
-    </header>
+        New Remynder
+        <FontAwesomeIcon
+          border={false}
+          className="button-icon"
+          fixedWidth={false}
+          flip={null}
+          icon="plus-circle"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      </button>
+    </Link>
   </section>
   <section
     className="NoteList"
   >
-    <ul />
+    <ul
+      className="notes-container"
+    />
   </section>
 </main>
 `;

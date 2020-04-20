@@ -3,6 +3,7 @@ import TokenService from '../services/token-service'
 import AuthApiService from '../services/auth-api-service'
 import { Button, Input } from '../Utils/Utils'
 import ApiContext from '../ApiContext'
+import './ReturningUser.css';
 
 export default class ReturningUser extends Component {
   static defaultProps = {
@@ -50,30 +51,37 @@ export default class ReturningUser extends Component {
             {error && <p className='red'>{error}</p>}
           </div>
           <div className='user_name'>
-            <label htmlFor='LoginForm_user_name'>
-              Email: {' '}
-            </label>
+            <div>
+              <label htmlFor='LoginForm_user_name'>
+                Email: {' '}
+              </label>
+            </div>
             <Input
               required
               name='user_name'
+              placeholder="john@lennon.com"
               id='LoginForm__user_name'
+              className="user-name-field"
             >
             </Input>
           </div>
           <div className='password'>
-            <label htmlFor='LoginForm__password'>
-              Password: {' '}
-            </label>
+            <div>
+              <label htmlFor='LoginForm__password'>
+                Password: {' '}
+              </label>
+            </div>
             <Input
               required
               name='password'
               type='password'
-              id='LoginForm__password'>
+              id='LoginForm__password'
+              className="user-name-field">
             </Input>
           </div>
-          <Button type='submit'>
+          <Button type='submit' class="returning-user-login-button">
             Login
-        </Button>
+          </Button>
         </form>
       </main>
     )

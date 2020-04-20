@@ -32,6 +32,7 @@ exports[`AddNote component renders a form.AddNote by default 1`] = `
           </label>
           <Required />
           <input
+            className="user-name-field"
             id="title"
             placeholder="Call Jane"
             required={true}
@@ -96,16 +97,56 @@ exports[`AddNote component renders a form.AddNote by default 1`] = `
           className="AddNote__buttons"
         >
           <button
+            className="cancel"
             onClick={[Function]}
             type="button"
           >
             Cancel
+            <FontAwesomeIcon
+              border={false}
+              className="button-icon"
+              fixedWidth={false}
+              flip={null}
+              icon="ban"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              swapOpacity={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
           </button>
            
           <button
+            className="save"
             type="submit"
           >
             Save
+            <FontAwesomeIcon
+              border={false}
+              className="button-icon"
+              fixedWidth={false}
+              flip={null}
+              icon="save"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              swapOpacity={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
           </button>
         </div>
       </form>
@@ -146,6 +187,7 @@ exports[`AddNote component renders the AddNote given props 1`] = `
           </label>
           <Required />
           <input
+            className="user-name-field"
             id="title"
             placeholder="Call Jane"
             required={true}
@@ -210,16 +252,56 @@ exports[`AddNote component renders the AddNote given props 1`] = `
           className="AddNote__buttons"
         >
           <button
+            className="cancel"
             onClick={[Function]}
             type="button"
           >
             Cancel
+            <FontAwesomeIcon
+              border={false}
+              className="button-icon"
+              fixedWidth={false}
+              flip={null}
+              icon="ban"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              swapOpacity={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
           </button>
            
           <button
+            className="save"
             type="submit"
           >
             Save
+            <FontAwesomeIcon
+              border={false}
+              className="button-icon"
+              fixedWidth={false}
+              flip={null}
+              icon="save"
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              swapOpacity={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
           </button>
         </div>
       </form>

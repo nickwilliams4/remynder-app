@@ -14,44 +14,41 @@ export default class Nav extends Component {
 
   renderLogoutLink() {
     return (
-      <div className='Header__logged-in'>
-        <Link
-          onClick={this.handleLogoutClick}
-          to='/'>
-          Logout
-        </Link>
-      </div>
+      <Link
+        onClick={this.handleLogoutClick}
+        to='/'
+        className="Header nav-link">
+        Logout
+      </Link>
     )
   }
 
   renderLoginLink() {
     return (
-      <div className='Header__not-logged-in'>
-        <div className='register'>
-          <Link
-            to='/SignUpForm'>
-            Register
-        </Link>
-        </div>
+      <>
         <Link
-          to='/ReturningUser'>
-          Log In
+          to='/SignUpForm'
+          className='register Header'>
+          Register
         </Link>
-      </div>
+        <Link
+          to='/ReturningUser'
+          className='register'>
+          Login
+        </Link>
+      </>
     )
   }
 
   render() {
     return (
       <nav className='Nav'>
-        <div className='remynder'>
-          <Link to='/'>
-            Remynder
+        <Link to='/' className='remynder nav-link'>
+          Remynder
         </Link>
-        </div>
-          {this.context.loggedIn
-            ? this.renderLogoutLink()
-            : this.renderLoginLink()}
+        {this.context.loggedIn
+          ? this.renderLogoutLink()
+          : this.renderLoginLink()}
       </nav>
     )
   }

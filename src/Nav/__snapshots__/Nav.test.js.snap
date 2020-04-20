@@ -5,23 +5,22 @@ exports[`Note component renders the Nav 1`] = `
   className="Nav"
 >
   <Link
+    className="remynder nav-link"
     to="/"
   >
     Remynder
   </Link>
-  <div
-    className="Header__not-logged-in"
+  <Link
+    className="register Header"
+    to="/SignUpForm"
   >
-    <Link
-      to="/SignUpForm"
-    >
-      Register
-    </Link>
-    <Link
-      to="/ReturningUser"
-    >
-      Log in
-    </Link>
-  </div>
+    Register
+  </Link>
+  <Link
+    className="register"
+    to="/ReturningUser"
+  >
+    Login
+  </Link>
 </nav>
 `;

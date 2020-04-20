@@ -3,13 +3,13 @@
 }
 
 .Note_title {
-  border-top: solid;
-  border-bottom: solid;
   font-size: 30px;
+  text-decoration: underline;
 }
 
 .NoteContent {
   margin-top: 50px;
+  font-size: x-large;
 }
 
 .Note__dates-created {
@@ -17,6 +17,20 @@
   margin-top: 75px;
 }
 
-button {
-  margin: 5px;
+.back-button {
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+  }
+  
+.back-button-icon {
+  margin-right: 10px;
+}
+
+.back-button:hover {
+  color: black;
+  background-color: white;
 }

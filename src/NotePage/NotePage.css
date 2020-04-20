@@ -1,8 +1,52 @@
-.newRemynder {
-  text-decoration: underline;
-}
-
-
 ul {
   list-style: none;
+}
+
+.note-list-item {
+  width: 100%;
+}
+
+.button-icon {
+  font-size: 11px;
+}
+
+.note-list-item {
+  border-bottom: 3px solid #635958;
+  padding-bottom: 20px;
+  border-top: 3px solid #635958;
+}
+
+.note-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.create-new-reminder {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(252, 252, 4);
+  font-size: 22px;
+}
+
+.new-reminder-button {
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+
+.new-reminder-button:hover {
+  color: black;
+  background-color: white;
 }

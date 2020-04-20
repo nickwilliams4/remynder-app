@@ -2,26 +2,42 @@
 .Nav a:active,
 .Nav a:focus,
 .Nav a:visited {
-  color: black;
+  color: white;
 }
 
 .Nav a:hover {
-  color: blue;
+  color: #efff00;
   text-decoration: solid;
 }
 
 .Nav a:not(:last-of-type) {
-  margin-right: 120px;
+  margin-right: 40px;
 }
 
-.remynder {
-  padding-bottom: 10px;
+.Nav {
+  background: black;
+  height: 70px;
+  padding-right: 70px;
 }
 
-@media screen and (max-width: 400px) {
-  .Header__not-logged-in, .Header__logged-in {
-    position: absolute;
-    margin-top: -28px;
-    margin-left: 310px;
+.Nav, .Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .Nav {
+    background: black;
+    height: 70px;
+  }
+  
+  .Nav, .Header {
+    padding-left: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
