@@ -18,6 +18,7 @@
   background: black;
   height: 70px;
   padding-right: 70px;
+  font-size: 25px;
 }
 
 .Nav, .Header {
@@ -31,6 +32,7 @@
   .Nav {
     background: black;
     height: 70px;
+    font-size: 20px;
   }
   
   .Nav, .Header {
