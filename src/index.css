@@ -15,3 +15,7 @@ body {
   right:0;
 }
 
+html {
+  position: relative;
+}
+

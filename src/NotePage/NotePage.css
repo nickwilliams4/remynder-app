@@ -11,15 +11,16 @@ ul {
 }
 
 .note-list-item {
-  border-bottom: 3px solid #635958;
   padding-bottom: 20px;
-  border-top: 3px solid #635958;
+  max-width: 400px;
+  box-shadow: 12px 10px 13px 9px #545454;
+  margin: 20px;
 }
 
 .note-page-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -31,10 +32,10 @@ ul {
 .notes-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  background-color: rgb(252, 252, 4);
   font-size: 22px;
+  margin: 20px;
 }
 
 .new-reminder-button {
@@ -49,4 +50,31 @@ ul {
 .new-reminder-button:hover {
   color: black;
   background-color: white;
+}
+
+@media screen and (min-width: 800px) {
+  .notes-container {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    grid-template-columns: auto auto;
+    margin: auto;
+    padding: 0;
+    column-gap: 5%;
+    padding-top: 70px;
+    row-gap: 5%;
+
+  }
+  .note-list-item {
+    box-shadow: 20px 12px 20px 0px #000000;
+    margin: auto;
+    background: rgb(255, 255, 126);
+    min-width: 400px;
+  }
+  html {
+    min-height: 250vh;
+    background-color: rgb(255, 255, 64);
+  }
 }

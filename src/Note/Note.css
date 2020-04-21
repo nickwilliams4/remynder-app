@@ -1,10 +1,13 @@
+
+@media screen and (max-width: 500px) {
 ul {
   padding: 0;
+}
 }
 
 .Note_edit, .Note__delete {
   height: 50px;
-  width: 140px;
+  width: 100px;
   border-radius: 20px;
   font-size: 16px;
   background-color: black;
@@ -32,3 +35,5 @@ ul {
   color: black;
   background-color: white;
 }
+
+
