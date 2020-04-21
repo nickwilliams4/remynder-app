@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "alias": "remynder-app",
   "name": "remynder-app",
   "routes": [
     {
