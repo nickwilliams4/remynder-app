@@ -52,6 +52,7 @@ exports[`AddNote component renders a form.AddNote by default 1`] = `
             required={true}
             rows="15"
             title="content"
+            type="text"
           />
         </div>
         <div
@@ -66,11 +67,6 @@ exports[`AddNote component renders a form.AddNote by default 1`] = `
             id="remynder"
             title="remynder"
           >
-            <option
-              value="5"
-            >
-              Every 5 Minutes (for testing purposes)
-            </option>
             <option
               value="6"
             >
@@ -207,6 +203,7 @@ exports[`AddNote component renders the AddNote given props 1`] = `
             required={true}
             rows="15"
             title="content"
+            type="text"
           />
         </div>
         <div
@@ -221,11 +218,6 @@ exports[`AddNote component renders the AddNote given props 1`] = `
             id="remynder"
             title="remynder"
           >
-            <option
-              value="5"
-            >
-              Every 5 Minutes (for testing purposes)
-            </option>
             <option
               value="6"
             >

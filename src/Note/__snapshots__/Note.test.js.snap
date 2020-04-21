@@ -23,7 +23,7 @@ exports[`Note component renders the Note 1`] = `
       <span
         className="Date"
       >
-        Apr 20th 2020
+        Apr 21st 2020
       </span>
     </div>
   </div>

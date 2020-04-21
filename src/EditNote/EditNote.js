@@ -17,8 +17,8 @@ export default class EditNote extends Component {
   state = {
     error: null,
     id: null,
-    title: null,
-    content: null,
+    title: '',
+    content: '',
     created: null,
     remynder: null,
   };
@@ -107,7 +107,7 @@ export default class EditNote extends Component {
   };
 
   render() {
-    const { error, title, content } = this.state
+    const { error, title='', content='' } = this.state
     return (
       <NotFoundPage>
         <section className='EditNote'>
