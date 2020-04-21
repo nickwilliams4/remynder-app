@@ -37,3 +37,16 @@ input {
   justify-content: center;
   align-items: center;
 }
+
+
+@media screen and (min-width: 500px) {
+  .EditNote {
+    font-size: 25px;
+  }
+  input[type="text"] {
+    font-size: 15px;
+  }
+  textarea[type="text"] {
+    font-size: 20px;
+  }
+}

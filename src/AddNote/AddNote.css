@@ -35,3 +35,15 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+@media screen and (min-width: 500px) {
+  .AddNote {
+    font-size: 25px;
+  }
+  input[type="text"] {
+    font-size: 15px;
+  }
+  textarea[type="text"] {
+    font-size: 20px;
+  }
+}

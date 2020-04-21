@@ -152,6 +152,7 @@ export default class EditNote extends Component {
                   title="content"
                   id="content"
                   rows="15"
+                  type="text"
                   value={content}
                   required
                   onChange={this.handleChangeContent}>
