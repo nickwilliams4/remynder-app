@@ -23,7 +23,7 @@ export default class HomePageContent extends Component {
           <header>
             <h3 className='sectionHeaders'>Get remynders</h3>
           </header>
-          <img src={RemynderFrequency} className="remynderFrequency" alt="Remynder frequency dropdown" />
+          <img src={RemynderFrequency} className="remynderFrequency" alt="çRemynder frequency dropdown" />
           <p>What sets this app apart is the ability to receive an email of your note or task directly to your inbox after creating a remynder, and how often you want to receive email remynders after that.</p>
         </section>
         <section className="section">
